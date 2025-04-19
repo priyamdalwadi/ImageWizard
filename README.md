@@ -23,3 +23,12 @@ Rapid anomaly detection prototyping
 ⚙️ Control grayscale mode and subplot sizing
 
 ✅ Built with OpenCV + Matplotlib
+
+
+🚀 Quick Start
+pip install -e .
+
+from imagewiz import visualize_filters
+
+visualize_filters("your_image.jpg", category="edges", gray_scale=True, subplot_size=3)
+
