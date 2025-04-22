@@ -30,5 +30,4 @@ pip install -e .
 
 from imagewiz import visualize_filters
 
-visualize_filters("your_image.jpg", category="edges", gray_scale=True, subplot_size=3)
-
+visualize_filters.blur(image="images/img.jpg", gray=False, save_each=True, save_fig=False, show=True, figsize=(12, 8), Gaussian__ksize=7, Median__ksize=3)
