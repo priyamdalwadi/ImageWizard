@@ -1,16 +1,25 @@
-from imagewiz import visualize_filters
+from imagewiz.filters import visualize_filters
 
-from imagewiz.filters import list_categories, list_filters
-
-#images/topView.png
-from imagewiz import visualize_filters
-
-visualize_filters(
-    "images/topView.png",
-    category="blur",
-    gray_scale=False,
-    save_each=True,         # 🔥 Saves each filter output
-    grid=True,              # ✅ Displays in a grid
-    subplot_size=3
+visualize_filters.edges(
+    image="images/img.jpg",
+    gray=True,
+    save_each=True,
+    save_fig=False,
+    show=True,
+    figsize=(12, 8),
+    # Inline filter params:
+    Canny__threshold1=50,
+    Canny__threshold2=150,
+    Sobel__ksize=7
 )
 
+visualize_filters.blur(
+    image="images/img.jpg",
+    gray=False,
+    save_each=True,
+    save_fig=False,
+    show=True,
+    figsize=(12, 8),
+    Gaussian__ksize=7,
+    Median__ksize=3
+)
