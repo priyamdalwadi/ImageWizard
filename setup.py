@@ -6,9 +6,17 @@ setup(
     packages=find_packages(),
     install_requires=[
         'opencv-python',
-        'matplotlib'
+        'matplotlib',
+        'tqdm',
     ],
-    author='Priyam Dalwad',
+    python_requires='>=3.7',
+    entry_points={
+        'console_scripts': [
+            'imagewiz=imagewiz.filters:main',
+        ],
+    },
+    author='Priyam Dalwadi, Nikhil Ajay Kadalge',
+    maintainer='Priyam Dalwadi, Nikhil Ajay Kadalge',
     description='A one-line image filter visualization tool for beginners',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
